@@ -37,7 +37,7 @@ Dự án làm 1 trang web mạng xã hội
 - **Comment**
   ![alt](/images/comment.png)
 
-- **CoverSation**
+- **ConverSation**
   ![alt](/images/conversation.png)
 
 - **Message**
