@@ -13,11 +13,13 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
       maxlength: 25,
+      unique: true,
     },
     email: {
       type: String,
       required: true,
       trim: true,
+      unique: true,
     },
     password: {
       type: String,
@@ -25,7 +27,8 @@ const userSchema = new mongoose.Schema(
     },
     avatar: {
       type: String,
-      default: "",
+      default:
+        "https://toigingiuvedep.vn/wp-content/uploads/2021/05/hinh-anh-avatar-de-thuong.jpg",
     },
     role: { type: String, default: "user" },
     gender: { type: String, default: "male" },
@@ -37,8 +40,6 @@ const userSchema = new mongoose.Schema(
       maxlength: 200,
     },
     website: { type: String, default: "" },
-    followers: [{ type: mongoose.Types.ObjectId, ref: "user" }],
-    following: [{ type: mongoose.Types.ObjectId, ref: "user" }],
     saved: [{ type: mongoose.Types.ObjectId, ref: "user" }],
   },
   {
